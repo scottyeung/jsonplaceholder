@@ -1,0 +1,7 @@
+<div class="user-list">
+{{input value=filter class="form-control" placeholder="Filter - Case Sensitive"}}
+
+{{#each filteredItems as |post|}}
+    {{user-list post=post}}
+{{/each}}
+</div>
