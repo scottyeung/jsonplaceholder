@@ -58,3 +58,4 @@ Specify what it takes to deploy your app.
 "# json-placeholder" 
 "# user-jsonplaceholder" 
 "# user-jsonplaceholder" 
+"# jsonplaceholder" 
