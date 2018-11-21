@@ -9,10 +9,10 @@ export default Controller.extend({
     },
     filter: '',
     filteredItems: computed('model.[]', 'filter', function(){
-        const filterTerm = this.get('filter');
+        const filterTerm = this.get('filter').toLowerCase();
 
         let filtered = this.model.filter((post)=>{
-            return post.get('username').indexOf(filterTerm) !== -1;
+            return post.get('username').toLowerCase().indexOf(filterTerm) !== -1;
         });
         
         return filtered;
