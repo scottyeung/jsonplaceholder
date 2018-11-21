@@ -10,13 +10,11 @@ export default Controller.extend({
     filter: '',
     filteredItems: computed('model.[]', 'filter', function(){
         const filterTerm = this.get('filter');
-        var model = this.get('model');
 
-        var filtered = model.filter(function(post) {
+        let filtered = this.model.filter((post)=>{
             return post.get('username').indexOf(filterTerm) !== -1;
-        }
+        });
         
-        );
-        return filtered
+        return filtered;
     })
 });
