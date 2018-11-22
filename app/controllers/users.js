@@ -4,8 +4,6 @@ import { computed } from '@ember/object';
 export default Controller.extend({
     init(){
         this._super(...arguments);
-
-        this.model = this.get('model');
     },
     filter: '',
     filteredItems: computed('model.[]', 'filter', function(){
